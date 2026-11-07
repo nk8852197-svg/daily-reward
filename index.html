@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08752d">
+<title>Daily Reward — Free Demo</title>
+<style>
+:root{--green:#08752d;--deep:#06451d;--lime:#28a745;--gold:#e8b923;--cream:#f5faef;--ink:#17351f;--muted:#718075;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#eaf5e6,#f8fbf5);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink)}
+header{background:linear-gradient(115deg,#06451d,#0a8d37);color:white;padding:18px max(18px,calc((100% - 1100px)/2));display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:5;box-shadow:0 5px 18px #06451d30}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px}.logo{width:42px;height:42px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-weight:1000;background:#063b1a}
+header small{display:block;font-size:10px;letter-spacing:1px;color:#d8f0d6}button{border:0;border-radius:12px;padding:11px 15px;font-weight:800;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}.admin-btn{background:var(--gold);color:#17351f}
+main{max-width:1100px;margin:22px auto;padding:0 16px}.hero{background:radial-gradient(circle at 85% 15%,#37b653,#08752d 48%,#06451d);color:white;border:1px solid #e5c24b;border-radius:24px;padding:30px;display:grid;grid-template-columns:1.3fr .7fr;gap:18px;align-items:center;box-shadow:0 12px 28px #06451d25}
+.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.05;margin:0 0 12px}.hero h1 span{color:#ffd95a}.hero p{color:#e4f6e2;max-width:570px}.hero-art{font-size:90px;text-align:center;filter:drop-shadow(0 10px 12px #002d16)}.tag{display:inline-block;background:#f9dc70;color:#23451f;border-radius:30px;padding:6px 12px;font-size:12px;font-weight:900;margin-bottom:12px}
+.notice{background:#fff8df;border:1px solid #efd47a;border-radius:14px;padding:12px 15px;margin:16px 0;color:#5b4a16;font-size:13px}
+.quick{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:18px 0}.quick button{background:white;color:var(--green);box-shadow:0 5px 15px #245d2414;border:1px solid #e1edda;padding:15px 8px}.quick b{display:block;font-size:24px;margin-bottom:4px}.section-head{display:flex;justify-content:space-between;align-items:center;margin:25px 0 12px}.section-head h2{margin:0;font-size:22px}.muted{color:var(--muted);font-size:12px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:white;border:1px solid #e2eddf;border-radius:18px;padding:17px;box-shadow:0 6px 18px #174a1710}.card .emoji{font-size:30px}.card h3{margin:8px 0 5px}.pill{display:inline-block;border-radius:30px;background:#eaf7e8;color:var(--green);font-size:11px;font-weight:800;padding:5px 9px}.card button{background:var(--green);color:white;margin-top:12px;width:100%}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.stat{font-size:25px;font-weight:900;color:var(--green)}.panel{display:none;background:#fff;border:1px solid #dcebd8;border-radius:18px;padding:18px;margin:18px 0;box-shadow:0 6px 18px #174a1710}.panel.active{display:block}.panel h2{margin-top:0}.admin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.admin-grid .card{background:#f7fbf4}.admin-grid strong{font-size:20px;color:var(--green)}.field{width:100%;padding:11px;border:1px solid #cfddca;border-radius:10px;margin:6px 0 12px;font:inherit}.footer{text-align:center;color:#728174;padding:25px 12px;font-size:12px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}nav button{background:#e3f1df;color:#17602c}nav button.active{background:var(--green);color:white}
+@media(max-width:700px){header{padding:12px 15px}.hero{grid-template-columns:1fr;padding:22px}.hero-art{font-size:58px}.quick{grid-template-columns:repeat(3,1fr)}.cards{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.admin-grid{grid-template-columns:1fr 1fr}.hero .cta{width:100%}}
+</style>
+</head>
+<body>
+<header>
+ <div class="brand"><div class="logo">DR</div><div>Daily Reward<small>EARN • SHOP • GROW</small></div></div>
+ <button class="admin-btn" onclick="showPanel('admin')">Owner Demo</button>
+</header>
+<main>
+ <section class="hero">
+  <div><span class="tag">GREEN + GOLD EDITION</span><h1>Welcome to <span>Daily Reward</span></h1>
+  <p>खरीदारी, उपयोगी मिशन और रेफरल रिवॉर्ड के लिए एक साफ़-सुथरा प्लेटफ़ॉर्म डेमो। अपने प्रोजेक्ट को अपने नियंत्रण में रखें।</p>
+  <button class="admin-btn cta" onclick="showPanel('products')">Explore Demo ↓</button></div>
+  <div class="hero-art" aria-hidden="true">🏆💚🪙</div>
+ </section>
+ <div class="notice"><b>यह केवल फ्री फ्रंट-एंड डेमो है।</b> इसमें असली अकाउंट, पैसे जमा/निकासी, भुगतान या कमाई नहीं होती। कोई पैसा जमा न करें।</div>
+ <nav id="tabs">
+  <button class="active" onclick="showPanel('home',this)">Home</button>
+  <button onclick="showPanel('products',this)">Products</button>
+  <button onclick="showPanel('missions',this)">Missions</button>
+  <button onclick="showPanel('referral',this)">Referral</button>
+  <button onclick="showPanel('wallet',this)">Wallet</button>
+  <button onclick="showPanel('profile',this)">Profile</button>
+ </nav>
+ <section id="home" class="panel active">
+  <div class="section-head"><h2>Your Demo Dashboard</h2><span class="pill">Sample account</span></div>
+  <div class="cards">
+   <div class="card"><div class="emoji">👛</div><div class="muted">Demo wallet balance</div><div class="stat">₹0.00</div><p class="muted">यह वास्तविक बैलेंस नहीं है।</p></div>
+   <div class="card"><div class="emoji">🎯</div><div class="muted">Available sample missions</div><div class="stat">03</div><p class="muted">मिशन केवल प्रदर्शन के लिए हैं।</p></div>
+   <div class="card"><div class="emoji">👥</div><div class="muted">Referral members</div><div class="stat">00</div><p class="muted">अभी कोई यूजर सिस्टम जुड़ा नहीं है।</p></div>
+  </div>
+ </section>
+ <section id="products" class="panel">
+  <div class="section-head"><h2>Featured Products</h2><span class="muted">Sample catalogue</span></div>
+  <div class="cards">
+   <article class="card"><div class="emoji">🌾</div><span class="pill">Sample product</span><h3>Healthy Breakfast Pack</h3><p class="muted">उत्पाद का विवरण और कीमत बाद में एडमिन द्वारा जोड़ी जा सकती है।</p><button onclick="alert('यह डेमो है — अभी ऑर्डर या भुगतान उपलब्ध नहीं है।')">View details</button></article>
+   <article class="card"><div class="emoji">🧴</div><span class="pill">Sample product</span><h3>Daily Essentials Kit</h3><p class="muted">असली उत्पाद, स्टॉक और विक्रेता की जानकारी अभी सेट नहीं है।</p><button onclick="alert('यह डेमो है — अभी ऑर्डर या भुगतान उपलब्ध नहीं है।')">View details</button></article>
+   <article class="card"><div class="emoji">🎁</div><span class="pill">Sample product</span><h3>Reward Gift Box</h3><p class="muted">यह कार्ड केवल डिजाइन दिखाने के लिए है।</p><button onclick="alert('यह डेमो है — अभी ऑर्डर या भुगतान उपलब्ध नहीं है।')">View details</button></article>
+  </div>
+ </section>
+ <section id="missions" class="panel">
+  <h2>Sample Missions</h2><div class="cards">
+   <div class="card"><div class="emoji">📖</div><h3>Read product information</h3><p class="muted">उत्पाद की जानकारी पढ़ें। कोई नकद रिवॉर्ड नहीं।</p><span class="pill">Demo task</span></div>
+   <div class="card"><div class="emoji">⭐</div><h3>Share feedback</h3><p class="muted">डेमो फीडबैक फॉर्म बाद में जोड़ा जा सकता है।</p><span class="pill">Demo task</span></div>
+   <div class="card"><div class="emoji">🛍️</div><h3>Explore catalogue</h3><p class="muted">कैटलॉग देखें और उत्पादों की जानकारी समझें।</p><span class="pill">Demo task</span></div>
+  </div>
+ </section>
+ <section id="referral" class="panel">
+  <h2>Referral Preview</h2><div class="card"><div class="emoji">🔗</div><h3>Your referral link</h3><p class="muted">लाइव रेफरल लिंक बैकएंड और यूजर अकाउंट बनने के बाद ही बनेगा।</p><button onclick="alert('रेफरल लिंक अभी सेट नहीं है।')">Copy demo link</button></div>
+ </section>
+ <section id="wallet" class="panel">
+  <h2>Wallet Preview</h2><div class="grid2"><div class="card"><div class="muted">Sample balance</div><div class="stat">₹0.00</div><p class="muted">कोई वास्तविक फंड नहीं।</p></div><div class="card"><div class="muted">Transactions</div><div class="stat">0</div><p class="muted">लेन-देन रिकॉर्ड अभी उपलब्ध नहीं।</p></div></div>
+  <div class="notice">Recharge और withdrawal बटन जानबूझकर सक्रिय नहीं किए गए हैं। वास्तविक भुगतान के लिए सुरक्षित पेमेंट गेटवे, KYC/कानूनी जाँच और सर्वर-साइड सत्यापन आवश्यक होगा।</div>
+ </section>
+ <section id="profile" class="panel">
+  <h2>Profile Preview</h2><div class="card"><div class="emoji">👤</div><h3>Demo User</h3><p class="muted">Login / registration अभी जुड़ा नहीं है।</p><span class="pill">Guest preview</span></div>
+ </section>
+ <section id="admin" class="panel">
+  <div class="section-head"><h2>👑 Owner Admin Preview</h2><span class="pill">UI preview only</span></div>
+  <div class="notice"><b>सुरक्षा नोट:</b> यह पासवर्ड से सुरक्षित Admin Panel नहीं है। इसे सार्वजनिक वेबसाइट पर असली नियंत्रण के लिए इस्तेमाल न करें। असली Owner-only एक्सेस सर्वर पर बनाना होगा।</div>
+  <div class="admin-grid">
+   <div class="card"><div class="muted">Users</div><strong>0</strong></div><div class="card"><div class="muted">Orders</div><strong>0</strong></div><div class="card"><div class="muted">Transactions</div><strong>0</strong></div>
+  </div>
+  <h3>Demo settings preview</h3>
+  <label>Website title</label><input class="field" value="Daily Reward" readonly>
+  <label>Theme</label><input class="field" value="Green + Gold" readonly>
+  <p class="muted">यूजर मैनेजमेंट, पेमेंट, डेटा और सेटिंग्स तभी चालू होंगे जब सुरक्षित backend और owner authentication जोड़े जाएंगे।</p>
+ </section>
+ <div class="footer">© Daily Reward — Free Demo • No real payments • No guaranteed income</div>
+</main>
+<script>
+function showPanel(id,btn){
+ document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+ const el=document.getElementById(id); if(el) el.classList.add('active');
+ document.querySelectorAll('#tabs button').forEach(b=>b.classList.remove('active'));
+ if(btn) btn.classList.add('active');
+ else if(id!=='admin'){const b=[...document.querySelectorAll('#tabs button')].find(x=>x.textContent.toLowerCase()===id);if(b)b.classList.add('active');}
+ window.scrollTo({top:document.querySelector('main').offsetTop-10,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
