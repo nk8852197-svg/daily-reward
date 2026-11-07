@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Reward Login</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+body{font-family:Arial;background:#eaf5e9;margin:0;padding:25px}
+.box{max-width:400px;margin:35px auto;background:white;padding:25px;border-radius:18px}
+h1{color:#087b35;text-align:center}
+input,button{box-sizing:border-box;width:100%;padding:14px;margin:9px 0;border-radius:9px}
+input{border:1px solid #bbb}
+button{background:#087b35;color:white;border:0;font-size:16px}
+#msg{text-align:center;color:#087b35}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>Daily Reward</h1>
+<h3>नया अकाउंट बनाएँ</h3>
+<input id="email" type="email" placeholder="अपना Email लिखें">
+<input id="password" type="password" placeholder="Password (कम से कम 6 अक्षर)">
+<button onclick="signup()">Register</button>
+<hr>
+<h3>पहले से अकाउंट है? Login करें</h3>
+<input id="loginEmail" type="email" placeholder="Email">
+<input id="loginPassword" type="password" placeholder="Password">
+<button onclick="login()">Login</button>
+<button onclick="logout()">Logout</button>
+<p id="msg"></p>
+</div>
+
+<script>
+const SUPABASE_URL = "https://drvefmzkexbcbeemtktn.supabase.co/rest/v1/"
+const SUPABASE_KEY = "sb_publishable_BRV-0ODeWyFClJvJNN_igA_8Q1V4p9A"
+
+const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+async function signup(){
+ const email=document.getElementById("email").value;
+ const password=document.getElementById("password").value;
+ const {error}=await db.auth.signUp({email,password});
+ document.getElementById("msg").innerText=
+ error ? error.message : "Registration request bhej di gayi. Email check karein.";
+}
+
+async function login(){
+ const email=document.getElementById("loginEmail").value;
+ const password=document.getElementById("loginPassword").value;
+ const {data,error}=await db.auth.signInWithPassword({email,password});
+ document.getElementById("msg").innerText=
+ error ? error.message : "Login successful! Welcome to Daily Reward.";
+}
+
+async function logout(){
+ const {error}=await db.auth.signOut();
+ document.getElementById("msg").innerText=
+ error ? error.message : "Logout successful.";
+}
+</script>
+</body>
+  </html>
